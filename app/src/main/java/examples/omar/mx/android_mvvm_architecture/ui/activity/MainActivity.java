@@ -1,4 +1,4 @@
-package examples.omar.mx.android_mvvm_architecture;
+package examples.omar.mx.android_mvvm_architecture.ui.activity;
 
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
@@ -13,7 +13,8 @@ import com.squareup.picasso.Picasso;
 
 import java.io.File;
 
-import examples.omar.mx.android_mvvm_architecture.adapter.RandomUserAdapter;
+import examples.omar.mx.android_mvvm_architecture.R;
+import examples.omar.mx.android_mvvm_architecture.ui.adapter.RandomUserAdapter;
 import examples.omar.mx.android_mvvm_architecture.api.RandomUsersApi;
 import examples.omar.mx.android_mvvm_architecture.model.RandomUsers;
 import okhttp3.Cache;
@@ -30,7 +31,6 @@ public class MainActivity extends AppCompatActivity {
     Retrofit retrofit;
     RecyclerView recyclerView;
     RandomUserAdapter mAdapter;
-
     Picasso picasso;
 
     @Override
