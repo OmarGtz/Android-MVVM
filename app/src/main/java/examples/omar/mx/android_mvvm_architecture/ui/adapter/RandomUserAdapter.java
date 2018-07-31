@@ -15,15 +15,17 @@ import java.util.List;
 
 import examples.omar.mx.android_mvvm_architecture.R;
 import examples.omar.mx.android_mvvm_architecture.model.Result;
+import examples.omar.mx.android_mvvm_architecture.ui.activity.MainActivity;
 
 public class RandomUserAdapter extends RecyclerView.Adapter<RandomUserAdapter.RandomUserViewHolder> {
 
     private final Picasso picasso;
     private List<Result> resultList = new ArrayList<>();
+    private MainActivity mainActivity;
 
-
-    public RandomUserAdapter(Picasso picasso) {
+    public RandomUserAdapter(Picasso picasso, MainActivity mainActivity) {
         this.picasso = picasso;
+        this.mainActivity = mainActivity;
     }
 
     @Override
@@ -38,7 +40,7 @@ public class RandomUserAdapter extends RecyclerView.Adapter<RandomUserAdapter.Ra
         Result result = resultList.get(position);
         holder.textView.setText(String.format("%s %s", result.getName().getFirst(),
                 result.getName().getLast()));
-        picasso.with(holder.imageView.getContext())
+        picasso.with(mainActivity)
                 .load(result.getPicture().getLarge())
                 .into(holder.imageView);
     }
