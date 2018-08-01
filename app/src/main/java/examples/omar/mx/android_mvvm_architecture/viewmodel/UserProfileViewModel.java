@@ -1,11 +1,13 @@
 package examples.omar.mx.android_mvvm_architecture.viewmodel;
 
 import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.ViewModel;
 
 import examples.omar.mx.android_mvvm_architecture.model.RandomUsers;
 import examples.omar.mx.android_mvvm_architecture.model.User;
 
-public class UserProfileViewModel {
+public class UserProfileViewModel extends ViewModel{
+
     private String userId;
     private LiveData<RandomUsers> randomUsers ;
 
@@ -20,4 +22,5 @@ public class UserProfileViewModel {
     public LiveData<RandomUsers> getRandomUsers() {
         return randomUsers;
     }
+
 }
