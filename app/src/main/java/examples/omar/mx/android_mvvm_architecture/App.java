@@ -11,7 +11,6 @@ import examples.omar.mx.android_mvvm_architecture.di.module.ContextModule;
 public class App extends Application{
 
     UserRamdomComponent component;
-
     public static App get(Activity activity){
         return (App)activity.getApplication();
     }
@@ -25,4 +24,5 @@ public class App extends Application{
     public UserRamdomComponent getComponent() {
         return component;
     }
+
 }
