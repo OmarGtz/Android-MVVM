@@ -9,19 +9,5 @@
     </style>
 
 
-    <!-- style radioButton -->
-    <style name="register_radio_btn">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-        <item name="android:paddingRight">@dimen/register_rbtn_horizontal_padding</item>
-        <item name="android:paddingLeft">@dimen/register_rbtn_horizontal_padding</item>
-        <item name="android:paddingTop">@dimen/register_rbtn_vertical_padding</item>
-        <item name="android:paddingBottom">@dimen/register_rbtn_vertical_padding</item>
-        <item name="android:background">@drawable/radio_btn_background</item>
-        <item name= "android:button">@null</item>
-        <item name="android:gravity">center</item>
-        <item name= "android:textColor">@drawable/color_state_rb</item>
-    </style>
-
 
 </resources>

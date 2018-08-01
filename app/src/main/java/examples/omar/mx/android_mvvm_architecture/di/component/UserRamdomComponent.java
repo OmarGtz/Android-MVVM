@@ -12,6 +12,7 @@ import examples.omar.mx.android_mvvm_architecture.di.scope.RandomUserScope;
 @Component(modules = {RandomUserModule.class,PicassoModule.class})
 public interface UserRamdomComponent {
 
-    RandomUsersApi getUserRandomApi();
-    Picasso getPicasso();
+
+    void inject();
+
 }
