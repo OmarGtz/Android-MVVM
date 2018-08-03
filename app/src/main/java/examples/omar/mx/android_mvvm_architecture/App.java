@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.Application;
 
 import examples.omar.mx.android_mvvm_architecture.di.component.DaggerUserRamdomComponent;
-import examples.omar.mx.android_mvvm_architecture.di.component.MainActivityComponent;
 import examples.omar.mx.android_mvvm_architecture.di.component.UserRamdomComponent;
 import examples.omar.mx.android_mvvm_architecture.di.module.ContextModule;
 

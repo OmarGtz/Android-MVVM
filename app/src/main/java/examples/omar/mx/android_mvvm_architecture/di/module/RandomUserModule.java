@@ -6,6 +6,7 @@ import com.google.gson.GsonBuilder;
 
 import dagger.Module;
 import dagger.Provides;
+import examples.omar.mx.android_mvvm_architecture.Repository.UserRandomRepository;
 import examples.omar.mx.android_mvvm_architecture.api.RandomUsersApi;
 import examples.omar.mx.android_mvvm_architecture.di.scope.RandomUserScope;
 import okhttp3.Cache;
@@ -18,16 +19,23 @@ import retrofit2.converter.gson.GsonConverterFactory;
 @Module(includes = OkHttpClientModule.class)
 public class RandomUserModule {
 
-    @RandomUserScope
+    private final String BASE_URL= "https://randomuser.me";
+
+    @Provides
+    UserRandomRepository getUserRepository(RandomUsersApi api){
+        return new UserRandomRepository(api);
+    }
+
     @Provides
     public RandomUsersApi getRandomUserApi(Retrofit retrofit){
         return retrofit.create(RandomUsersApi.class);
     }
 
+    @RandomUserScope
     @Provides
     public Retrofit getRetrofit(OkHttpClient okHttpClient, GsonConverterFactory gsonConverterFactory) {
         return new Retrofit.Builder()
-                .baseUrl("https://randomuser.me")
+                .baseUrl(BASE_URL)
                 .client(okHttpClient)
                 .addConverterFactory(gsonConverterFactory)
                 .build();
