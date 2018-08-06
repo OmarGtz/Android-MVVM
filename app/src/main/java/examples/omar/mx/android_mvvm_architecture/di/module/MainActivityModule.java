@@ -10,6 +10,7 @@ import examples.omar.mx.android_mvvm_architecture.di.scope.MainActivityScope;
 import examples.omar.mx.android_mvvm_architecture.ui.activity.MainActivity;
 import examples.omar.mx.android_mvvm_architecture.ui.adapter.RandomUserAdapter;
 import examples.omar.mx.android_mvvm_architecture.viewmodel.UserRandomViewModel;
+import examples.omar.mx.android_mvvm_architecture.viewmodel.factory.UserViewModelFactory;
 
 @Module
 
@@ -23,10 +24,8 @@ public class MainActivityModule {
 
     @MainActivityScope
     @Provides
-    UserRandomViewModel viewModel(){
-        
-
-        return ViewModelProviders.of(mainActivity).get(UserRandomViewModel.class);
+    UserRandomViewModel viewModel(UserViewModelFactory factory){
+        return ViewModelProviders.of(mainActivity,factory).get(UserRandomViewModel.class);
     }
 
     @MainActivityScope
