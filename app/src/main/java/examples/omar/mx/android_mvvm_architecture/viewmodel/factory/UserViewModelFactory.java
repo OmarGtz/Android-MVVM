@@ -36,7 +36,6 @@ public class UserViewModelFactory implements ViewModelProvider.Factory {
                 }
             }
         }
-
         try {
             return (T)creator.get();
         }catch (Exception e){
