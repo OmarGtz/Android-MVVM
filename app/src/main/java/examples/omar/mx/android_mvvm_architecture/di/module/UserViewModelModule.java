@@ -15,9 +15,7 @@ import examples.omar.mx.android_mvvm_architecture.viewmodel.factory.UserViewMode
 
 @Module
 public class UserViewModelModule {
-
     private MainActivity mainActivity;
-
     public UserViewModelModule(MainActivity mainActivity) {
         this.mainActivity = mainActivity;
     }

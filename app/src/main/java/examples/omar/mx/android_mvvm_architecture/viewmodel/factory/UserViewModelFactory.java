@@ -25,9 +25,7 @@ public class UserViewModelFactory implements ViewModelProvider.Factory {
     @NonNull
     @Override
     public <T extends ViewModel> T create(@NonNull Class<T> modelClass) {
-
         Provider<? extends ViewModel> creator = creators.get(modelClass);
-
         if(creator==null){
             for (Map.Entry<Class<? extends ViewModel>,Provider<ViewModel>> entry: creators.entrySet()){
                 if(modelClass.isAssignableFrom(entry.getKey())){
