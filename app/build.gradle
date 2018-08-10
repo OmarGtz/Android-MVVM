@@ -40,10 +40,9 @@ dependencies {
     annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
 
 
-        // ViewModel and LiveData
-        implementation "android.arch.lifecycle:extensions:$lifecycle_version"
-        implementation "android.arch.lifecycle:runtime:1.1.1"
-         annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version" // use kapt for Kotlin
+    // ViewModel and LiveData
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    annotationProcessor "android.arch.lifecycle:compiler:$lifecycle_version" // use kapt for Kotlin
 
     //Dagger
     implementation 'com.google.dagger:dagger:2.16'
