@@ -12,7 +12,6 @@ import examples.omar.mx.android_mvvm_architecture.di.scope.RandomUserScope;
 public class ActivityContextModule {
 
     private Context context;
-
     public ActivityContextModule(Context context) {
         this.context = context;
     }
@@ -20,7 +19,7 @@ public class ActivityContextModule {
     @Named("Activity_Context")
     @RandomUserScope
     @Provides
-    public Context getActivityContext(){
+    public Context getActivityContext() {
         return context;
     }
 }
