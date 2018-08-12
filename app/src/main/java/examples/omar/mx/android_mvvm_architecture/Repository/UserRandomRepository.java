@@ -16,6 +16,5 @@ public class UserRandomRepository {
     public LiveData<RandomUsers> getUsers(){
         final MutableLiveData<RandomUsers> randomUsers = new MutableLiveData<>();
         return randomUsers;
-
     }
 }
